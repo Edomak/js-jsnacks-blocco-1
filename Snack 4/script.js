@@ -5,13 +5,21 @@
 // Scrivere una funzione che, partendo da una lista di nomi e una lista di cognomi, generi una coppia nome-cognome casuale, così da permettere al signor Gatsby di costruire una falsa lista di 10 invitati alla sua festa, da stampare in pagina, utilizzando il tag adatto alle liste.
 
 var listaNomi = ["Edoardo", "Luca", "Matteo", "Francesco", "lucia", "Eleonora", "Alessandro", "Eva"];
+console.log(listaNomi);
 
 var listaCognomi = ["Rossi", "Batani", "Verdi", "Neri", "Maccherini", "Gialli", "Neri", "Verdi"];
+console.log(listaCognomi);
 
 var nomeCognomeRandom = "";
 
-nomeCognome (listaNomi, listaCognomi);
-console.log(nomeCognomeRandom);
+for (var i = 1; i <= 10; i++) {
+
+    nomeCognome (listaNomi, listaCognomi);
+    console.log(nomeCognomeRandom);
+
+    document.getElementById("lista_invitati").innerHTML += "<li>" + i + " - " + nomeCognomeRandom + "</li>";
+}
+
 
 // ------------------------------ FUNCTIONS
 
